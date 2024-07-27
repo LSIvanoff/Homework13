@@ -1,22 +1,22 @@
 public class Main {
     public static void main(String[] args) {
         Author author1 = new Author("Валерия", "Никифорова");
-        System.out.println("Автор: " + author1.getLastname() + " " + author1.getName());
+        Author author2 = new Author("Платон", "Ойунский");
+        Author author3 = new Author("Платон", "Ойунский");
 
         Book book1 = new Book("ЭтноВзгляд", author1, 2023);
-        System.out.println("Название: " + book1.getTitle());
-        System.out.println("Автор: " + book1.getAuthor().getLastname() + " " + book1.getAuthor().getName());
-        System.out.println("Дата публикации: " + book1.getPublishYear());
+        Book book2 = new Book("Нюргун Боотур Стремительный", author2, 1947);
+        Book book3 = new Book("Великий Кудангса", author3, 1930);
 
         book1.setPublishDate(2013);
-        System.out.println("Дата публикации: " + book1.getPublishYear() + "\n");
 
-        Author author2 = new Author("Платон", "Ойунский");
-        System.out.println("Автор: " + author2.getLastname() + " " + author2.getName());
+        System.out.println();
+        System.out.println(book1.toString());
+        System.out.println();
+        System.out.println(book2.toString());
+        System.out.println();
 
-        Book book2 = new Book("Нюргун Боотур Стремительный", author2, 1947);
-        System.out.println("Название: " + book2.getTitle());
-        System.out.println("Автор: " + book2.getAuthor().getLastname() + " " + book2.getAuthor().getName());
-        System.out.println("Дата публикации: " + book2.getPublishYear());
+        System.out.println(book3.equals(book1));
+        System.out.println(author3.equals(author2));
     }
 }
